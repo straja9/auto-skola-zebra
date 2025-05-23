@@ -2,7 +2,6 @@
 
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
-import Link from 'next/link';
 import ContactMap from './components/ContactMap';
 
 export default function Home() {
@@ -135,7 +134,7 @@ export default function Home() {
                   <p className="text-gray-400">B kategorija</p>
                 </div>
               </div>
-              <p className="text-gray-300 italic">"Odlična auto škola sa profesionalnim pristupom. Instruktor je bio strpljiv i detaljno mi objasnio sve što me je interesovalo. Položio sam iz prvog pokušaja!"</p>
+              <p className="text-gray-300 italic">&quot;Odlična auto škola sa profesionalnim pristupom. Instruktor je bio strpljiv i detaljno mi objasnio sve što me je interesovalo. Položio sam iz prvog pokušaja!&quot;</p>
               <div className="mt-4 flex">
                 {[1, 2, 3, 4, 5].map((star) => (
                   <svg key={star} xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-yellow-400" viewBox="0 0 20 20" fill="currentColor">
@@ -155,7 +154,7 @@ export default function Home() {
                   <p className="text-gray-400">B kategorija</p>
                 </div>
               </div>
-              <p className="text-gray-300 italic">"Bila sam veoma nervozna pre prvog časa, ali zahvaljujući stručnosti i smirenosti mog instruktora, brzo sam stekla samopouzdanje. Preporučujem svima!"</p>
+              <p className="text-gray-300 italic">&quot;Bila sam veoma nervozna pre prvog časa, ali zahvaljujući stručnosti i smirenosti mog instruktora, brzo sam stekla samopouzdanje. Preporučujem svima!&quot;</p>
               <div className="mt-4 flex">
                 {[1, 2, 3, 4, 5].map((star) => (
                   <svg key={star} xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-yellow-400" viewBox="0 0 20 20" fill="currentColor">
@@ -175,7 +174,7 @@ export default function Home() {
                   <p className="text-gray-400">A kategorija</p>
                 </div>
               </div>
-              <p className="text-gray-300 italic">"Obuka za motocikl je bila temeljita i bezbedna. Instruktori su iskusni vozači koji znaju kako da prenesu znanje. Sada sa zadovoljstvom vozim svoj motor."</p>
+              <p className="text-gray-300 italic">&quot;Obuka za motocikl je bila temeljita i bezbedna. Instruktori su iskusni vozači koji znaju kako da prenesu znanje. Sada sa zadovoljstvom vozim svoj motor.&quot;</p>
               <div className="mt-4 flex">
                 {[1, 2, 3, 4, 5].map((star) => (
                   <svg key={star} xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-yellow-400" viewBox="0 0 20 20" fill="currentColor">
@@ -418,7 +417,7 @@ export default function Home() {
               <li>Zabrana upravljanja vozilom u periodu od 23:00-05:00</li>
               <li>Zabrana upotrebe telefona i drugih sredstava za komunikaciju</li>
               <li>Brzina kretanja vozila ne sme biti veća od 90% od dozvoljene brzine</li>
-              <li>Vozilo mora biti označeno posebnom oznakom "P"</li>
+              <li>Vozilo mora biti označeno posebnom oznakom &quot;P&quot;</li>
               <li>Vozač mlađi od 18 godina mora biti pod nadzorom lica sa B kategorijom najmanje 5 godina</li>
               <li>Sa probnom vozačkom dozvolom nije moguće upisati obuku za druge kategorije</li>
             </ul>
