@@ -2,21 +2,71 @@
 
 import { useEffect, useRef, useState } from 'react';
 
-// Add Google Maps types
+// Define interfaces for Google Maps types
+interface GoogleMapType {
+  Map: new (element: HTMLElement, options: MapOptions) => Map;
+  Marker: new (options: MarkerOptions) => Marker;
+  InfoWindow: new (options?: InfoWindowOptions) => InfoWindow;
+  Animation: {
+    DROP: number;
+  };
+  MapTypeId: {
+    ROADMAP: string;
+  };
+}
+
+interface Map {
+  setCenter(latLng: LatLngLiteral): void;
+  setZoom(zoom: number): void;
+}
+
+interface Marker {
+  setPosition(latLng: LatLngLiteral): void;
+  setMap(map: Map | null): void;
+  addListener(eventName: string, handler: Function): void;
+}
+
+interface InfoWindow {
+  open(map?: Map, anchor?: Marker): void;
+  close(): void;
+  setContent(content: string | Node): void;
+}
+
+interface LatLngLiteral {
+  lat: number;
+  lng: number;
+}
+
+interface MapOptions {
+  center: LatLngLiteral;
+  zoom: number;
+  mapTypeId?: string;
+  mapTypeControl?: boolean;
+  styles?: Array<MapTypeStyle>;
+}
+
+interface MapTypeStyle {
+  featureType?: string;
+  elementType?: string;
+  stylers: Array<{ [key: string]: number | string }>;
+}
+
+interface MarkerOptions {
+  position: LatLngLiteral;
+  map: Map;
+  title?: string;
+  animation?: number;
+}
+
+interface InfoWindowOptions {
+  content?: string | Node;
+}
+
+// Add Google Maps to global window object
 declare global {
   interface Window {
     google: {
-      maps: {
-        Map: any;
-        Marker: any;
-        InfoWindow: any;
-        Animation: {
-          DROP: number;
-        };
-        MapTypeId: {
-          ROADMAP: string;
-        };
-      };
+      maps: GoogleMapType;
     };
   }
 }
