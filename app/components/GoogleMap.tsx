@@ -23,7 +23,7 @@ interface Map {
 interface Marker {
   setPosition(latLng: LatLngLiteral): void;
   setMap(map: Map | null): void;
-  addListener(eventName: string, handler: Function): void;
+  addListener(eventName: string, handler: (e?: unknown) => void): void;
 }
 
 interface InfoWindow {
